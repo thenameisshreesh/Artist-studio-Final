@@ -9,7 +9,9 @@ from flask_mail import Mail, Message
 import uuid
 
 import requests
-
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from reportlab.lib.utils import ImageReader
 
 
 
@@ -169,7 +171,6 @@ def sucs():
 
         Regards,    
         Event Team VEERA's NAIIL 💅
-        static/WhatsApp Video 2025-07-29 at 13.11.33_9c0770b8.mp4
         https://www.instagram.com/veeras_naiil_?igsh=MXIzMTJtZTB4c3V0NQ==
         """
         msg.attach("qr.png", "image/png", buffered.getvalue())
@@ -178,6 +179,52 @@ def sucs():
         except Exception as e:
             return f"Error sending mail: {e}", 500
 
+        # ✅ Mail 2 Generate PDF
+        pdf_buffer = BytesIO()
+        pdf = canvas.Canvas(pdf_buffer, pagesize=A4)
+        width, height = A4
+
+        # Company Logo (assume 'logo.png' is in static folder)
+        logo_path = os.path.join("static", "/static/logopink.jpg")
+        if os.path.exists(logo_path):
+            pdf.drawImage(ImageReader(logo_path), x=50, y=height - 150, width=120, height=60)
+
+        # Shop Info
+        pdf.setFont("Helvetica-Bold", 14)
+        pdf.drawString(50, height - 180, "VEERA'S NAIIL STUDIO")
+        pdf.setFont("Helvetica", 12)
+        pdf.drawString(50, height - 200, "Near Gokul Hall, Sadar, Nagpur, Maharashtra")
+        pdf.drawString(50, height - 215, "Contact: +91-9860585858")
+        pdf.drawString(50, height - 230, f"Participant: {name}")
+        pdf.drawString(50, height - 245, f"Transaction ID: {transaction_id}")
+        pdf.drawString(50, height - 260, f"Status: {order_info.get('order_status')}")
+
+        # QR Code
+        qr_path = os.path.join("static", f"qr_{transaction_id}.png")
+        with open(qr_path, "wb") as f:
+            f.write(buffered.getvalue())
+
+        pdf.drawImage(ImageReader(qr_path), x=50, y=height - 460, width=150, height=150)
+
+        pdf.showPage()
+        pdf.save()
+
+        pdf_buffer.seek(0)
+
+        msg = Message('Payment Confirmation - Your QR Pass', recipients=[email])
+        msg.body = f"""Dear {name},
+
+        Thank you for registering for our event.
+
+        We've attached your unique QR code pass with shop details.
+        Please show this pass at the entry.
+
+        Regards,    
+        VEERA's NAIIL 💅
+        Instagram: https://www.instagram.com/veeras_naiil_?igsh=MXIzMTJtZTB4c3V0NQ==
+        """
+        msg.attach("entry_pass.pdf", "application/pdf", pdf_buffer.getvalue())
+        mail.send(msg)
 
         # ✅ Send Email to Admin
         admin_msg = Message('New Customer Registered', recipients=['shreeshpitambare777@gmail.com'])
