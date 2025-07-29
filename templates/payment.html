@@ -1,0 +1,16 @@
+<!-- templates/payment.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting to Payment...</title>
+</head>
+<body>
+    <h2>Redirecting you to payment...</h2>
+    <form id="paymentForm" method="post" action="https://payments.cashfree.com/pg/view">
+        <input type="hidden" name="payment_session_id" value="{{ session_id }}">
+    </form>
+    <script>
+        document.getElementById("paymentForm").submit();
+    </script>
+</body>
+</html>

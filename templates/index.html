@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nail Art Workshop</title>
+  <style>
+
+    /*Fontssss*/
+
+        @font-face {
+        font-family: 'Chonky Bunny';
+        src: url('fonts/Chonky Bunny.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Bricolage Grotesque';
+        src: url('M:\\me\\CO-OWN\\Artist Studio\\static\\Bricolage Grotesque\\') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Neue Haas Grotesk';
+        src: url('/static/NDM2.ttf') format('truetype');
+    }
+
+/*---------------------------------------------------------------------------------*/
+
+
+
+
+    @keyframes slideToImage {
+      0% { right: -100%; opacity: 0; }
+      100% { right: 8%; opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    
+
+    @keyframes floatSubtle {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+    }
+
+    @keyframes breathEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  /* div4 css*/
+
+  .click-animate:active {
+  transform: scale(0.95);
+}
+
+
+  .breathing:hover {
+    animation: breathEffect 1s ease-in-out infinite;
+    
+  }
+
+  .breathing {
+    animation: breathing 2s ease-in-out infinite;
+  }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    @keyframes breathing {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.20); }
+  }
+
+    /*css for div2*/
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes floatSubtle {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+  }
+
+  .portfolio-img {
+    width: 250px;
+    border-radius: 12px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    animation: fadeIn 1.5s ease forwards, floatSubtle 5s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
+    
+  }
+
+  .portfolio-img:hover {
+    transform: scale(1.1); /* enlarge on hover */
+  
+    z-index: 1;
+  }
+
+
+
+  /*div5 css*/
+
+  .event-info {
+    max-width: 70%;
+    margin: 40px auto;
+    padding: 20px;
+   
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+    opacity: 1;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .event-info {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+
+    .brd:hover {
+    animation: breathEffect 1s ease-in-out infinite;
+  }
+
+  .brd {
+    animation: breathEffect 1s ease-in-out infinite;
+  }
+
+  @keyframes brd {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.20); }
+  }
+
+
+  
+  </style>
+</head>
+<body style="margin: 0; font-family: 'Poppins', sans-serif; 
+             background-image: url('/static/IMG_9603.JPG');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             color: #333; text-align: center;">
+
+  <!-- Static Logo -->
+  <img src="/static/logopink.jpg" alt="Logo" style="
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: -1;
+    pointer-events: none;
+    object-fit: cover;
+  ">
+
+  <!-- div1: Owner Image + Animated Text -->
+  <div style="position: relative; margin: 40px auto; margin-left: 10px; max-width: 100%;">
+  <img 
+    src="/static/Mam Photo .png" 
+    alt="Event Owner" 
+    style="
+      width: 55%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      margin-right: 600px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(128, 0, 128, 0.3);
+    "
+  >
+    <h2 style="
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      right: -100%;
+      left: 45%;
+      font-family: 'Chonky Bunny', cursive;
+      font-size: 6vw;
+      color: rgba(255, 255, 255, 0.8);
+      white-space: nowrap;
+      animation: slideToImage 2s ease-out forwards;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    ">
+      3 DAYS <span style="color:#6d14db;">NAIL</span><br>
+      <span style="color:#6d14db;">ART</span> MASTERCLASS
+    </h2>
+
+    <h2 style="
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+      right: -100%;
+      font-family: 'Neue Haas Grotesk', sans-serif;
+      font-size: 4vw;
+      margin-top: 100px;
+      color: rgba(255, 255, 255, 0.7);
+      white-space: nowrap;
+      animation: slideToImage 2s ease-out forwards;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      margin-top: 50px;
+      text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+    ">
+      -- KSHITIJA<span>   </span>  SAWANT
+    </h2>
+  </div>
+
+  <!-- div2: Portfolio + Scroll Images -->
+  <div style="padding: 20px 0; margin-top: 20px;">
+  <h1 style="font-size: 2rem; color: #ffffff; font-family: 'Chonky Bunny', cursive; ">
+    Nail <span style="color: #6d14db;">Art</span> Samples
+  </h1>
+  <div style="
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 10px;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  ">
+    <img src="/static/PORTFILO 3.jpg" alt="Nail Art 1" class="portfolio-img" style="animation-delay: 0.3s;">
+    <img src="/static/PORTFILO 4.jpg" alt="Nail Art 2" class="portfolio-img" style="animation-delay: 0.6s;">
+    <img src="/static/PORTFILO 5 (1).jpg" alt="Nail Art 3" class="portfolio-img" style="animation-delay: 0.9s;">
+    <img src="/static/PORTFILO 6.jpg" alt="Nail Art 4" class="portfolio-img" style="animation-delay: 1.2s;">
+  </div>
+</div>
+
+
+
+  <!-- div3: About the Workshop -->
+  <div style="
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    border-color: #6d14db;
+    width: 90%;
+    border: #6d14db;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(106, 29, 185, 0.2);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #6d14db;
+    border-style: solid;
+    animation: fadeIn 1.5s ease forwards, floatSubtle 5s ease-in-out infinite;">
+  <h1 style="color: #ffffff; ">About <span style="color: #6d14db;">Us</span></h1>
+  <h4 style="color: #ffffff; ">
+    ✨ Hi I am Kshitija Sawant, a certified International nail CIDESCO certified artist 🎨 with a passion for creativity and beauty. I have been working in this field for the past few years and love designing unique nail art that makes people feel confident and happy. I specialize in gel nails 💅, nail extensions, and custom nail art like floral, glitter, bridal, and trendy designs. Every design I create is made with care, detail, and high-quality products to ensure it lasts long and keeps your nails healthy. I believe that nail art is not just fashion—it's a way to express your personality. Whether it’s a special occasion or a regular day, I’m here to give your nails a fresh and beautiful look.
+  </h4>
+</div>
+
+
+
+
+
+<!-- div6: What You'll Learn -->
+<!-- Section: What You'll Learn -->
+<div style="margin-top: 40px; 
+    animation: fadeIn 1.5s ease forwards, floatSubtle 5s ease-in-out infinite;">
+  <!-- Title -->
+  <h1 style="text-align:center;  font-family: 'Chonky Bunny', cursive; ">
+    <span style="color:#6d14db;">What</span> 
+    <span style="color:white;">You'll</span> 
+    <span style="color:#6d14db;">Learn</span>
+  </h1>
+
+  <!-- Scrollable Day Tabs -->
+  <div style="
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  ">
+
+    <!-- Day 1 -->
+    <div style="
+      min-width: 300px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border: 4px solid #6d14db;
+    ">
+      <h2 style="color: #6d14db; text-align:center;">Day 1st</h2>
+      <ul style="text-align: left; padding-left: 20px; color: #ffffff; " >
+        <li>Detailed Theory</li>
+        <li>Nail Prep./Dry Mani.</li>
+        <li>Products Knowledge</li>
+        <li>Tools Knowledge</li>
+        <li>Machine Knowledge</li>
+        <li>Tips Knowledge</li>
+        <li>Filers & Buffers</li>
+        <li>Nail Shapes</li>
+        <li>Animal Art</li>
+        <li>Cow Print</li>
+        <li>Leopard Print</li>
+        <li>Zebra Nail Art</li>
+        <li>Heart Making</li>
+        <li>Rose Brush Work</li>
+        <li>Blooming Rose</li>
+        <li>Blooming Art</li>
+        <li>Marble Art</li>
+        <li>Russian Marble Art</li>
+      </ul>
+    </div>
+
+    <!-- Day 2 -->
+    <div style="
+      min-width: 300px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border: 4px solid #6d14db;
+    ">
+      <h2 style="color: #6d14db; text-align:center;">Day 2nd</h2>
+      <ul style="text-align: left; padding-left: 20px; color: #ffffff; " >
+        <li>All Type Of French Arts</li>
+        <li>Detailed Brush Art</li>
+        <li>Line Art</li>
+        <li>Swirl Art</li>
+        <li>Check Art</li>
+        <li>Flowers Art</li>
+        <li>Falling Glitter Art</li>
+        <li>Gel Polish On Natural Nails</li>
+        <li>Press Ons</li>
+        <li>Temporary Extensions</li>
+        <li>Proper Press On Measurement</li>
+        <li>Gel Polish Removal</li>
+        <li>Press Ons Removal</li>
+        <li>Client Consultation</li>
+        <li>Nail Art Photography</li>
+      </ul>
+    </div>
+
+    <!-- Day 3 -->
+    <div style="
+      min-width: 300px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border: 4px solid #6d14db;
+    ">
+      <h2 style="color: #6d14db; text-align:center;">Day 3rd</h2>
+      <ul style="text-align: left; padding-left: 20px; color: #ffffff; ">
+        <li><strong>TYPES OF EXTENSIONS</strong></li>
+        <li>Acrylic Extension</li>
+        <li>Gel Extension</li>
+        <li>Gel Inbuilt Extension</li>
+        <li><strong>NAIL EXTENSIONS REMOVAL</strong></li>
+        <li>Acrylic Extension Removal</li>
+        <li>Gel Extension Removal</li>
+        <li>Temporary Extension Removal</li>
+        <li>Drill Machine</li>
+        <li>Social Media /Marketing</li>
+        <li>Business Ideas</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div style="background-color: rgba(0, 0, 0, 0.1); border-radius: 15px; border: 4px solid #6d14db; padding: 20px; width: 90%; max-width: 500px; margin: 20px auto; color: white; box-sizing: border-box;">
+  <h2 style="font-size: 24px; font-weight: bold; text-align: center;">
+    <span style="color: #6d14db;">What</span> you'll <span style="color: #6d14db;">get</span>:
+  </h2>
+  <h4>Hands-on Nail Art Practice</h4>
+  <h4>Practice Material Provided</h4>
+  <h4>Certificate of Participation</h4>
+  <h4>Goodie Bag / Nail art kit</h4>
+  <h4>Business Opportunity Guidance</h4>
+  <h4>3 days Lunch & Tea Included</h4>
+</div>
+
+
+
+<!-- div4: Info + Button -->
+  <div style="padding: 20px; font-size: 1rem; color: #ffffff;">
+    <h3>🗓️ <strong>Dates:</strong> August 15 - 17</h3>
+    <h3>📍 <strong>Location:</strong> Hotel Sky Avenue, Sangli</h3>
+    <h3>🎓 <strong>Certification Included</strong></h3>
+    <h3>💼 <strong>Hands-on learning from industry professionals</strong></h3>
+    <h3>📱 <strong>Contact: </strong>9096724090</h3>
+    <button onclick="handleClick()" class="click-animate breathing" style="
+  background-color: #8a2be2;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.5s ease, transform 0.2s ease;
+" onmouseover="this.style.backgroundColor='#6a1db9'" onmouseout="this.style.backgroundColor='#8a2be2'">
+  Next
+</button>
+  </div>
+
+<script>
+  function handleClick() {
+    // Haptic feedback
+    if (navigator.vibrate) navigator.vibrate(50);
+
+    // You can also add animation logic here if needed (like confetti, sound, etc.)
+    
+    // Redirect
+    window.location.href = "register";
+  }
+</script>
+
+
+</body>
+</html>
