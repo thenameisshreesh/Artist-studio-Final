@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Registration Form</title>
+  <style>
+
+
+  /*Ripple*/
+  .ripple {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  background: #6d14db;
+  border-radius: 50%;
+  opacity: 0.6;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  animation: rippleEffect 1.4s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+    @keyframes slideToImage {
+      0% { right: -100%; opacity: 0; }
+      100% { right: 8%; opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes floatSubtle {
+      0%   { transform: translateX(0); }
+      50%  { transform: translateX(20px); }
+      100% { transform: translateX(0); }
+    }
+
+    .logo {
+      width: 200px; 
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
+      max-width: 500px;
+      animation: fadeIn 1s ease;
+    }
+
+    .container {
+      max-width: 500px;
+      background-color: rgba(0, 0, 0, 0.5); /* darker semi-transparent background */
+      margin: 60px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e95dff;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+      color: #ffffff; /* white for visibility */
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ffffff;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.1); /* light transparent */
+      color: #ffffff; /* white text */
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #dddddd;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #e95dff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 25px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      animation: breathing 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body style="margin: 0; font-family: 'Poppins', sans-serif; 
+             background-image: url('/static/IMG_9603.jpg');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             color: #fff; text-align: center;">
+
+
+  <img src="/static/logopink.jpg" alt="Logo" style="
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none;
+    object-fit: cover;
+  ">
+
+  <div class="container">
+    <h2>Register for the Event</h2>
+    <form action="/payment" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" required />
+
+      <label for="profession">Profession:</label>
+      <input type="text" id="profession" name="profession" required />
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </div>
+</body>
+</html>
