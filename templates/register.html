@@ -4,7 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Event Registration Form</title>
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
   <style>
+
+
+
+     @font-face {
+        font-family: 'Chonky Bunny';
+        src: url('static/Chonky Bunny.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Bricolage Grotesque';
+        src: url('static/NDM2.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Neue Haas Grotesk';
+        src: url('/static/NDM2.ttf') format('truetype');
+    }
+
+
+
+
+
 
 
   /*Ripple*/
@@ -169,7 +193,7 @@
   ">
 
   <div class="container">
-    <h2>Register for the Event</h2>
+    <h2 style=" font-family: Neue Haas Grotesk;">Register For Workshop</h2>
     <form action="/payment" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required />
@@ -194,7 +218,7 @@
       <label for="address">Address:</label>
       <textarea id="address" name="address" rows="3" required></textarea>
 
-      <button type="submit">Proceed to Payment</button>
+      <button type="submit" style="font-family: 'Chonky Bunny', cursive;">Proceed to Payment</button>
     </form>
   </div>
 </body>
