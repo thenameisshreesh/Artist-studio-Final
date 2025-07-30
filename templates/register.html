@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Event Registration Form</title>
   <style>
+
+
+  /*Ripple*/
+  .ripple {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  background: #e95dff;
+  border-radius: 50%;
+  opacity: 0.6;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  animation: rippleEffect 1.4s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
     @keyframes slideToImage {
       0% { right: -100%; opacity: 0; }
       100% { right: 8%; opacity: 1; }
@@ -63,7 +95,7 @@
 
     h2 {
       text-align: center;
-      color: #6d14db;
+      color: #e95dff;
       margin-bottom: 25px;
     }
 
@@ -96,7 +128,7 @@
     }
 
     button {
-      background-color: #6d14db;
+      background-color: #e95dff;
       color: white;
       border: none;
       padding: 12px;

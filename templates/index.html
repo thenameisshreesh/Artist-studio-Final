@@ -8,6 +8,29 @@
   <title>Nail Art Workshop</title>
   <style>
 
+   /*Ripple*/
+  .ripple {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  background: #6d14db;
+  border-radius: 50%;
+  opacity: 0.6;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  animation: rippleEffect 1.4s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+
+
     /*Fontssss*/
 
         @font-face {
@@ -172,7 +195,7 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    opacity: 0.7;
+    opacity: 0.4;
     z-index: -1;
     pointer-events: none;
     object-fit: cover;
@@ -206,8 +229,8 @@
       animation: slideToImage 2s ease-out forwards;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     ">
-      3 DAYS <span style="color:#6d14db;">NAIL</span><br>
-      <span style="color:#6d14db;">ART</span> MASTERCLASS
+      3 DAYS <span style="color:#e95dff;">NAIL</span><br>
+      <span style="color:#e95dff;">ART</span> MASTERCLASS
     </h2>
 
     <h2 style="
@@ -230,10 +253,32 @@
     </h2>
   </div>
 
+
+  <!-- div3: About the Workshop -->
+  <div style="
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    border-color: #e95dff;
+    width: 90%;
+    border: #e95dff;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(106, 29, 185, 0.2);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e95dff;
+    border-style: solid;
+    animation: fadeIn 1.5s ease forwards, floatSubtle 5s ease-in-out infinite;">
+  <h1 style="color: #ffffff; ">About <span style="color: #e95dff;">Us</span></h1>
+  <h4 style="color: #ffffff; ">
+    ✨ Hi I am Kshitija Sawant, a certified International nail CIDESCO certified artist 🎨 with a passion for creativity and beauty. I have been working in this field for the past few years and love designing unique nail art that makes people feel confident and happy. I specialize in gel nails 💅, nail extensions, and custom nail art like floral, glitter, bridal, and trendy designs. Every design I create is made with care, detail, and high-quality products to ensure it lasts long and keeps your nails healthy. I believe that nail art is not just fashion—it's a way to express your personality. Whether it’s a special occasion or a regular day, I’m here to give your nails a fresh and beautiful look.
+  </h4>
+</div>
+
   <!-- div2: Portfolio + Scroll Images -->
   <div style="padding: 20px 0; margin-top: 20px;">
   <h1 style="font-size: 2rem; color: #ffffff; font-family: 'Chonky Bunny', cursive; ">
-    Nail <span style="color: #6d14db;">Art</span> Samples
+    Nail <span style="color: #e95dff;">Art</span> Samples
   </h1>
   <div style="
     display: flex;
@@ -252,30 +297,6 @@
 
 
 
-  <!-- div3: About the Workshop -->
-  <div style="
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 20px;
-    border-color: #6d14db;
-    width: 90%;
-    border: #6d14db;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(106, 29, 185, 0.2);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #6d14db;
-    border-style: solid;
-    animation: fadeIn 1.5s ease forwards, floatSubtle 5s ease-in-out infinite;">
-  <h1 style="color: #ffffff; ">About <span style="color: #6d14db;">Us</span></h1>
-  <h4 style="color: #ffffff; ">
-    ✨ Hi I am Kshitija Sawant, a certified International nail CIDESCO certified artist 🎨 with a passion for creativity and beauty. I have been working in this field for the past few years and love designing unique nail art that makes people feel confident and happy. I specialize in gel nails 💅, nail extensions, and custom nail art like floral, glitter, bridal, and trendy designs. Every design I create is made with care, detail, and high-quality products to ensure it lasts long and keeps your nails healthy. I believe that nail art is not just fashion—it's a way to express your personality. Whether it’s a special occasion or a regular day, I’m here to give your nails a fresh and beautiful look.
-  </h4>
-</div>
-
-
-
-
 
 <!-- div6: What You'll Learn -->
 <!-- Section: What You'll Learn -->
@@ -283,9 +304,9 @@
     animation: fadeIn 1.5s ease forwards, floatSubtle 5s ease-in-out infinite;">
   <!-- Title -->
   <h1 style="text-align:center;  font-family: 'Chonky Bunny', cursive; ">
-    <span style="color:#6d14db;">What</span> 
+    <span style="color:#e95dff;">What</span> 
     <span style="color:white;">You'll</span> 
-    <span style="color:#6d14db;">Learn</span>
+    <span style="color:#e95dff;">Learn</span>
   </h1>
 
   <!-- Scrollable Day Tabs -->
@@ -306,9 +327,9 @@
       padding: 20px;
       scroll-snap-align: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      border: 4px solid #6d14db;
+      border: 4px solid #e95dff;
     ">
-      <h2 style="color: #6d14db; text-align:center;">Day 1st</h2>
+      <h2 style="color: #e95dff; text-align:center;">Day 1st</h2>
       <ul style="text-align: left; padding-left: 20px; color: #ffffff; " >
         <li>Detailed Theory</li>
         <li>Nail Prep./Dry Mani.</li>
@@ -339,9 +360,9 @@
       padding: 20px;
       scroll-snap-align: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      border: 4px solid #6d14db;
+      border: 4px solid #e95dff;
     ">
-      <h2 style="color: #6d14db; text-align:center;">Day 2nd</h2>
+      <h2 style="color: #e95dff; text-align:center;">Day 2nd</h2>
       <ul style="text-align: left; padding-left: 20px; color: #ffffff; " >
         <li>All Type Of French Arts</li>
         <li>Detailed Brush Art</li>
@@ -369,9 +390,9 @@
       padding: 20px;
       scroll-snap-align: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      border: 4px solid #6d14db;
+      border: 4px solid #e95dff;
     ">
-      <h2 style="color: #6d14db; text-align:center;">Day 3rd</h2>
+      <h2 style="color: #e95dff; text-align:center;">Day 3rd</h2>
       <ul style="text-align: left; padding-left: 20px; color: #ffffff; ">
         <li><strong>TYPES OF EXTENSIONS</strong></li>
         <li>Acrylic Extension</li>
@@ -392,30 +413,31 @@
 
 
 
-<div style="background-color: rgba(0, 0, 0, 0.1); border-radius: 15px; border: 4px solid #6d14db; padding: 20px; width: 90%; max-width: 500px; margin: 20px auto; color: white; box-sizing: border-box;">
+<div style="background-color: rgba(0, 0, 0, 0.1); border-radius: 15px; border: 4px solid #e95dff; padding: 20px; width: 90%; max-width: 500px; margin: 20px auto; color: white; box-sizing: border-box;">
   <h2 style="font-size: 24px; font-weight: bold; text-align: center;">
-    <span style="color: #6d14db;">What</span> you'll <span style="color: #6d14db;">get</span>:
+    <span style="color: #e95dff;">What</span> you'll <span style="color: #e95dff;">get</span>:
   </h2>
-  <h4>Hands-on Nail Art Practice</h4>
-  <h4>Practice Material Provided</h4>
-  <h4>Certificate of Participation</h4>
-  <h4>Goodie Bag / Nail art kit</h4>
-  <h4>Business Opportunity Guidance</h4>
-  <h4>3 days Lunch & Tea Included</h4>
+  <ul style="list-style-type: disc; padding-left: 20px;">
+    <li>Hands-on Nail Art Practice</li>
+    <li>Practice Material Provided</li>
+    <li>Certificate of Participation</li>
+    <li>Goodie Bag / Nail art kit</li>
+    <li>Business Opportunity Guidance</li>
+    <li>3 days Lunch & Tea Included</li>
+  </ul>
 </div>
 
 
 
 <!-- div4: Info + Button -->
   <div style="padding: 20px; font-size: 1rem; color: #ffffff;">
-    <h3>🗓️ <strong>Dates:</strong> August 15 - 17</h3>
-    <h3>📍 <strong>Location:</strong> Hotel Sky Avenue, Sangli</h3>
-    <h3>🎓 <strong>Certification Included</strong></h3>
-    <h3>💼 <strong>Hands-on learning from industry professionals</strong></h3>
-    <h3>📱 <strong>Contact: </strong>9096724090</h3>
+    <h2><strong><span style="color: #ff24ed;">Hands-on</span> learning from industry <span style="color:#ff24ed;">professionals</span></strong></h2>
+    <h3><strong><span style="color:#e95dff;">Dates:</span></strong><br><b> August 15 - 17 2025</b></h3>
+    <h3><strong><span style="color:#e95dff;">Location:</span></strong><br> Hotel Sky Avenue, Sangli</h3>
+    <h3><strong><span style="color: #e95dff;">Contact:</span> </strong><br>+91 7666159706<br>+91 9356848965</h3>
     <button onclick="handleClick()" class="click-animate breathing" style="
-  background-color: #8a2be2;
-  color: rgb(0, 0, 0);
+  background-color:#ff24ed;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 14px 28px;
   font-size: 1rem;
@@ -433,12 +455,33 @@
     // Haptic feedback
     if (navigator.vibrate) navigator.vibrate(50);
 
-    // You can also add animation logic here if needed (like confetti, sound, etc.)
-    
     // Redirect
     window.location.href = "register";
   }
+
+  document.addEventListener("click", function (e) {
+    // Ripple effect
+    const ripple = document.createElement("span");
+    ripple.className = "ripple";
+    ripple.style.left = e.clientX + "px";
+    ripple.style.top = e.clientY + "px";
+    document.body.appendChild(ripple);
+
+    setTimeout(() => ripple.remove(), 1400); // Remove after animation
+
+    // Vibration
+    if (navigator.vibrate) navigator.vibrate(70);
+
+    // Play sound
+    const sound = document.getElementById("tapSound");
+    if (sound) {
+      sound.currentTime = 0;
+      sound.play();
+    }
+  });
 </script>
+
+
 
 
 </body>
