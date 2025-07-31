@@ -87,7 +87,7 @@ def pay():
     transaction_id = str(uuid.uuid4())
     gtdi = transaction_id
 
-    amount=1
+    amount=5000
     order_id = "Order" + str(uuid.uuid4())
 
 
