@@ -182,7 +182,7 @@ Instagram: https://www.instagram.com/veeras_naiil_?igsh=MXIzMTJtZTB4c3V0NQ==
         mail.send(msg)
 
         # Send admin notification
-        admin_msg = Message('New Customer Registered', recipients=['shreeshpitambare777@gmail.com'])
+        admin_msg = Message('New Customer Registered', recipients=['veerasnails@gmail.com'])
         admin_msg.body = f"""New Customer Registered:
 Name: {name}
 Email: {email}
