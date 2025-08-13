@@ -28,8 +28,8 @@ gadd=""
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'shreeshpitambare084@gmail.com'
-app.config['MAIL_PASSWORD'] = 'untk duvx aisq ssuq'  # ✅ App password, not your Gmail password
+app.config['MAIL_USERNAME'] = 'veerasnail@gmail.com'
+app.config['MAIL_PASSWORD'] = 'hscw wcwt qsbt sjus'  # ✅ App password, not your Gmail password
 app.config['MAIL_DEFAULT_SENDER'] = 'shreeshpitambare084@gmail.com'
 mail = Mail(app)
 #--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -87,7 +87,7 @@ def pay():
     transaction_id = str(uuid.uuid4())
     gtdi = transaction_id
 
-    amount=5000
+    amount=1
     order_id = "Order" + str(uuid.uuid4())
 
 
