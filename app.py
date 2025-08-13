@@ -135,7 +135,9 @@ https://www.instagram.com/veeras_naiil_?igsh=MXIzMTJtZTB4c3V0NQ==
         mail.send(msg)
 
         # Generate entry pass from base Ticket.pdf
-        base_pdf_path = "/static/Ticket.pdf"
+        # Correct relative path for base PDF
+        base_pdf_path = os.path.join("static", "Ticket.pdf")
+
         packet = BytesIO()
         can = canvas.Canvas(packet, pagesize=A4)
 
