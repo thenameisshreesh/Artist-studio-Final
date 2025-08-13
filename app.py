@@ -143,12 +143,12 @@ https://www.instagram.com/veeras_naiil_?igsh=MXIzMTJtZTB4c3V0NQ==
 
         # Positions — adjust for your ticket template
         can.setFont("Helvetica-Bold", 12)
-        can.drawString(200, 500, name)
-        can.drawString(200, 480, email)
-        can.drawString(200, 460, transaction_id)
+        can.drawString(200, 480, name)
+        can.drawString(200, 460, email)
+        can.drawString(200, 440, transaction_id)
 
         # Place QR code
-        can.drawImage(ImageReader(qr_buffer), x=200, y=300, width=150, height=150)
+        can.drawImage(ImageReader(qr_buffer), x=250, y=320, width=150, height=150)
 
         can.save()
         packet.seek(0)
