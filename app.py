@@ -148,7 +148,7 @@ https://www.instagram.com/veeras_naiil_?igsh=MXIzMTJtZTB4c3V0NQ==
         can.drawString(200, 440, transaction_id)
 
         # Place QR code
-        can.drawImage(ImageReader(qr_buffer), x=250, y=320, width=150, height=150)
+        can.drawImage(ImageReader(qr_buffer), x=250, y=300, width=150, height=150)
 
         can.save()
         packet.seek(0)
